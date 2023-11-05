@@ -1,2 +1,7 @@
 # RStudio files
 .Rproj.user/
+
+# History files
+.Rhistory
+
+.RData
