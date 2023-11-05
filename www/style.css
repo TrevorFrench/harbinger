@@ -1,0 +1,36 @@
+.container-fluid{
+  padding: 0px;
+}
+
+.navbar{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar-default {
+    background-color: black;
+    border-color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+/* ACTIVE TAB */
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: white;
+    background-color: black;
+}
+
+/* TABS */
+.navbar-default .navbar-nav>li>a {
+    color: lightgrey;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}

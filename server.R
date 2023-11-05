@@ -1,28 +1,12 @@
-library(shiny)
+#-------------------------------------------------------------------------------
+#------------------------------------SOURCES------------------------------------
+#-------------------------------------------------------------------------------
+source("functions.R")
+sourceDir("examples/")
 
-# Define UI for the application
-ui <- fluidPage(
-  navbarPage("HARBINGER",
-             tabPanel("Visualization",
-                      sidebarLayout(
-                        sidebarPanel(
-                          selectInput("dataset", "Select a Dataset", choices = c("mtcars", "iris")),
-                          actionButton("load_data", "Load Data"),
-                          selectInput("y_var", "Select Y Variable", choices = NULL),
-                          selectInput("x_var", "Select X Variable(s)", choices = NULL, multiple = TRUE)
-                        ),
-                        mainPanel(
-                          plotOutput("visualization")
-                        )
-                      )
-             ),
-             tabPanel("Linear Regression",
-                      verbatimTextOutput("linear_regression_results")
-             )
-  )
-)
-
-# Define server logic
+#-------------------------------------------------------------------------------
+#--------------------------------SERVER FUNCTION--------------------------------
+#-------------------------------------------------------------------------------
 server <- function(input, output, session) {
   dataset_loaded <- reactiveVal(NULL)
   
@@ -61,6 +45,3 @@ server <- function(input, output, session) {
     }
   })
 }
-
-# Run the application
-shinyApp(ui = ui, server = server)
