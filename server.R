@@ -21,6 +21,8 @@ server <- function(input, output, session) {
     updateSelectInput(session, "y_var", choices = var_choices, selected = NULL)
   })
   
+  output$head <- renderTable({head(dataset_loaded(), input$n)}, digits = 9)
+  
   output$visualization <- renderPlot({
     dataset <- dataset_loaded()
     x_vars <- input$x_var
