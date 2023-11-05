@@ -1,0 +1,23 @@
+{
+  "name": "heroku-shiny-app",
+  "stack": "heroku-22",
+  "description": "harbinger-app",
+  "keywords": [
+    "r",
+    "shiny",
+    "heroku-buildpack-r"
+  ],
+  "repository": "https://github.com/TrevorFrench/harbinger",
+  //"logo": "",
+  "success_url": "/",
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "TrevorFrench/heroku-buildpack-r"
+    }
+  ]
+}
